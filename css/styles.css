@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: rgba(0, 0, 0, .7)
+}
+
+header{
+    font-family: 'Pacifico', cursive;
+    background: #6a24a7;
+    color: white;
+    padding: 8px 20px;
+}
+
+.bg-gradient{
+    background: #DA22FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #9733EE, #DA22FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #9733EE, #DA22FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.animated-bg{
+    animation: animatedBg .5s alternate infinite ease;
+}
+
+.container{
+    max-width: 1024px;
+    margin: auto;
+    padding: 20px;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    grid-gap: 10px;
+}
+
+.hero{
+    padding: 20px;
+    color: #fff;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.hero button{
+    border: 1px solid white;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 100px;
+    background: transparent;
+    color: white;
+    outline: none;
+    transition: .25s background ease-in-out;
+}
+
+.hero button:disabled{
+    background: rgba(255, 255, 255, .7)
+}
+
+#jokes-list{
+    list-style: none;
+    padding: 0;
+}
+
+#jokes-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, .03);
+    margin-bottom: 10px;
+}
+
+#jokes-list li img{
+    height: 100px;
+}
+
+#joke-loader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+#joke-loader img{
+    height: 100px;
+}
+
+
+#status{
+    padding: 20px;
+    border: 1px solid #a748fa;
+    border-radius: 15px;
+}
+
+#status img{
+    width: 100%;
+    margin-top: 30px;
+
+}
+
+@keyframes animatedBg{
+    from{
+        background: #DA22FF;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #9733EE, #DA22FF);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #9733EE, #DA22FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        opacity: 1;
+    }
+    to{
+        background: #DA22FF;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #DA22FF, #9733EE);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #DA22FF, #9733EE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        opacity: .5;
+    }
+}
